@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Instagram, Facebook, Twitter, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Asset1 from "@/assets/Asset 1black.png";
 
 const HeaderSection = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,73 +11,72 @@ const HeaderSection = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100"
+      dir="rtl"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between">
-        {/* Social Icons - hidden on mobile */}
-        <div className="hidden sm:flex items-center gap-4">
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Instagram className="w-4 h-4" />
-          </a>
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Facebook className="w-4 h-4" />
-          </a>
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Twitter className="w-4 h-4" />
-          </a>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        
+        {/* 1. الشعارات (يمين الشاشة) */}
+       <div className="flex items-center gap-4 sm:gap-6">
+          <img 
+            src={Asset1} 
+            alt="وزارة الشباب والثقافة" 
+            // 🔴 تم التكبير: w-28 للموبايل، و sm:w-40 أو md:w-48 للشاشات الأكبر
+            className="w-20 sm:w-40 md:w-43 h-auto object-contain" 
+          />
         </div>
-
-        {/* Mobile menu button */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="sm:hidden text-foreground p-1"
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
-
-        {/* Logo */}
+        {/* 2. اسم المعرض (في المنتصف) */}
         <div className="absolute left-1/2 -translate-x-1/2">
-          <span className="font-heading text-lg sm:text-xl md:text-2xl italic text-foreground whitespace-nowrap">
-            Cultures de l'Âme
+          <span className="font-serif text-xl sm:text-2xl md:text-3xl text-[#1A1A1A] whitespace-nowrap" style={{ fontFamily: 'Amiri, serif' }}>
+            تقاطعات الرؤى
           </span>
         </div>
 
-        {/* Nav - desktop */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-body tracking-wide text-muted-foreground">
-          <a href="#about" className="hover:text-foreground transition-colors">About</a>
-          <a href="#artists" className="hover:text-foreground transition-colors">Artists</a>
-          <a href="#reservation" className="hover:text-foreground transition-colors">Reserve</a>
+        {/* 3. الروابط وزر الحجز (يسار الشاشة - ديسكتوب) */}
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+          <a href="#about" className="hover:text-[#d4af37] transition-colors">عن المعرض</a>
+          <a href="#artists" className="hover:text-[#d4af37] transition-colors">الفنانون</a>
+          
+          {/* زر الحجز الفخم */}
+          <a 
+            href="#reservation" 
+            className="bg-[#1A1A1A] text-white px-6 py-2.5 rounded-full hover:bg-[#d4af37] transition-all duration-300 shadow-sm"
+          >
+            احجز تذكرتك
+          </a>
         </nav>
 
-        {/* Empty spacer for mobile layout balance */}
-        <div className="w-5 sm:hidden" />
+        {/* زر القائمة للموبايل (يسار الشاشة) */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-[#1A1A1A] p-1"
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
 
-      {/* Mobile dropdown menu */}
+      {/* 4. قائمة الموبايل المنسدلة */}
       <AnimatePresence>
         {menuOpen && (
           <motion.nav
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="sm:hidden border-t border-border bg-background/95 backdrop-blur-sm overflow-hidden"
+            className="md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-md overflow-hidden"
           >
-            <div className="flex flex-col items-center gap-4 py-6 text-sm font-body tracking-wide text-muted-foreground">
-              <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-foreground transition-colors">About</a>
-              <a href="#artists" onClick={() => setMenuOpen(false)} className="hover:text-foreground transition-colors">Artists</a>
-              <a href="#reservation" onClick={() => setMenuOpen(false)} className="hover:text-foreground transition-colors">Reserve</a>
-              <div className="flex items-center gap-5 pt-2">
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Twitter className="w-4 h-4" />
-                </a>
-              </div>
+            <div className="flex flex-col items-center gap-6 py-8 text-base font-medium text-gray-600">
+              <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-[#d4af37] transition-colors">عن المعرض</a>
+              <a href="#artists" onClick={() => setMenuOpen(false)} className="hover:text-[#d4af37] transition-colors">الفنانون</a>
+              
+              {/* زر الحجز في الموبايل */}
+              <a 
+                href="#reservation" 
+                onClick={() => setMenuOpen(false)} 
+                className="bg-[#1A1A1A] text-white px-8 py-3 rounded-full hover:bg-[#d4af37] transition-all duration-300 w-11/12 text-center mt-2"
+              >
+                احجز تذكرتك VIP
+              </a>
             </div>
           </motion.nav>
         )}

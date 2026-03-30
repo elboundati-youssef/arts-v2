@@ -8,6 +8,10 @@ import ArtistsSection from "@/components/ArtistsSection";
 import ReservationSection from "@/components/ReservationSection";
 import PartnersSection from "@/components/PartnersSection";
 import FooterSection from "@/components/FooterSection";
+import EventDetails from "@/components/EventDetails";
+import BiographySection from "@/components/BiographySection";
+import CatalogSection from "@/components/CatalogSection";
+import MapSection from "@/components/MapSection";
 
 const Index = () => {
   return (
@@ -15,12 +19,16 @@ const Index = () => {
       <HeaderSection />
       <HeroSection />
       <AboutSection />
+      <EventDetails />
+      <BiographySection />
       <StatementSection />
       <StatsSection />
       <VideoSection />
       <ArtistsSection />
       <ReservationSection />
-      <PartnersSection />
+      <CatalogSection />
+   
+      <MapSection />
       <FooterSection />
     </main>
   );

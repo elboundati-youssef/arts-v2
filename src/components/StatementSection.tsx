@@ -3,7 +3,8 @@ import gradientWave from "@/assets/gradient-wave.png";
 
 const StatementSection = () => {
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 relative overflow-hidden">
+    <section className="py-16 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
+      {/* الموجة اللونية في الخلفية */}
       <img
         src={gradientWave}
         alt=""
@@ -20,13 +21,11 @@ const StatementSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-foreground leading-snug"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#1A1A1A] leading-snug"
+          style={{ fontFamily: 'Amiri, serif' }} // 🔴 إضافة الخط الفخم
           dir="rtl"
         >
           الفن لا يعرف حدوداً
-          <span className="italic block mt-3 sm:mt-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl text-muted-foreground" dir="ltr">
-            L'art ne connaît pas de frontières
-          </span>
         </motion.blockquote>
       </div>
     </section>
