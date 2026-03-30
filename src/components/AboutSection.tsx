@@ -3,9 +3,9 @@ import aboutArt from "@/assets/about-art.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-32 px-6">
+    <section id="about" className="py-16 sm:py-32 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-24 items-center">
           {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -15,14 +15,14 @@ const AboutSection = () => {
             className="order-2 lg:order-1"
             dir="rtl"
           >
-            <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground font-body mb-6 block">
+            <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground font-body mb-4 sm:mb-6 block">
               عن المعرض
             </span>
-            <h2 className="font-heading text-3xl md:text-5xl text-foreground mb-8 leading-snug">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl text-foreground mb-6 sm:mb-8 leading-snug">
               حيث تتلاقى
               <span className="italic block mt-2">الحضارات والإبداع</span>
             </h2>
-            <div className="space-y-6 text-muted-foreground font-body text-base leading-relaxed">
+            <div className="space-y-4 sm:space-y-6 text-muted-foreground font-body text-sm sm:text-base leading-relaxed">
               <p>
                 في قلب مدينة طنجة، ملتقى الحضارات والثقافات، يقدم معرض "تقاطعات الرؤى" تجربة فنية استثنائية تجمع بين أبرز الفنانين المعاصرين من مختلف أنحاء العالم.
               </p>
@@ -30,7 +30,7 @@ const AboutSection = () => {
                 يستكشف المعرض التقاطعات العميقة بين الهويات الثقافية المتنوعة من خلال أعمال تمزج بين التقليد والحداثة، الشرق والغرب، الحلم والواقع.
               </p>
             </div>
-            <div className="divider-dark w-16 mt-10" />
+            <div className="divider-dark w-16 mt-8 sm:mt-10" />
           </motion.div>
 
           {/* Image */}
@@ -47,7 +47,7 @@ const AboutSection = () => {
               width={800}
               height={1000}
               loading="lazy"
-              className="w-full max-w-md mx-auto lg:max-w-none shadow-lg"
+              className="w-full max-w-sm mx-auto lg:max-w-none shadow-lg"
             />
           </motion.div>
         </div>

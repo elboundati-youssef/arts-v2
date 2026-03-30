@@ -4,7 +4,7 @@ import artistStudio from "@/assets/artist-studio.jpg";
 
 const VideoSection = () => {
   return (
-    <section className="py-20 px-6">
+    <section className="py-14 sm:py-20 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -23,13 +23,12 @@ const VideoSection = () => {
           />
           <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors duration-500" />
           
-          {/* Play button */}
           <div className="absolute inset-0 flex items-center justify-center">
             <motion.div
               whileHover={{ scale: 1.1 }}
-              className="w-20 h-20 rounded-full border-2 border-primary-foreground flex items-center justify-center bg-primary-foreground/10 backdrop-blur-sm"
+              className="w-14 h-14 sm:w-20 sm:h-20 rounded-full border-2 border-primary-foreground flex items-center justify-center bg-primary-foreground/10 backdrop-blur-sm"
             >
-              <Play className="w-8 h-8 text-primary-foreground ml-1" />
+              <Play className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground ml-0.5 sm:ml-1" />
             </motion.div>
           </div>
         </motion.div>
