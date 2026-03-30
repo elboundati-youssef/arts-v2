@@ -15,23 +15,23 @@ const ReservationSection = () => {
   };
 
   return (
-    <section id="reservation" className="py-32 px-6">
+    <section id="reservation" className="py-16 sm:py-32 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
           dir="rtl"
         >
-          <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground font-body mb-4 block">
+          <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground font-body mb-3 sm:mb-4 block">
             حجز خاص
           </span>
-          <h2 className="font-heading text-3xl md:text-5xl text-foreground mb-4">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl text-foreground mb-3 sm:mb-4">
             تجربة <span className="italic">VIP</span> حصرية
           </h2>
-          <p className="text-muted-foreground font-body max-w-lg mx-auto">
+          <p className="text-muted-foreground font-body text-sm sm:text-base max-w-lg mx-auto">
             احجز مقعدك في أمسية الافتتاح الحصرية واستمتع بتجربة فنية لا تُنسى
           </p>
         </motion.div>
@@ -42,15 +42,15 @@ const ReservationSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           onSubmit={handleSubmit}
-          className="space-y-10"
+          className="space-y-8 sm:space-y-10"
           dir="rtl"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
             <div>
-              <label className="block text-xs tracking-wide uppercase text-muted-foreground font-body mb-3">الاسم الكامل</label>
+              <label className="block text-xs tracking-wide uppercase text-muted-foreground font-body mb-2 sm:mb-3">الاسم الكامل</label>
               <input
                 type="text"
-                className="editorial-input w-full text-foreground"
+                className="editorial-input w-full text-foreground text-sm sm:text-base"
                 placeholder="أدخل اسمك الكامل"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -58,10 +58,10 @@ const ReservationSection = () => {
               />
             </div>
             <div>
-              <label className="block text-xs tracking-wide uppercase text-muted-foreground font-body mb-3">البريد الإلكتروني</label>
+              <label className="block text-xs tracking-wide uppercase text-muted-foreground font-body mb-2 sm:mb-3">البريد الإلكتروني</label>
               <input
                 type="email"
-                className="editorial-input w-full text-foreground"
+                className="editorial-input w-full text-foreground text-sm sm:text-base"
                 placeholder="email@example.com"
                 dir="ltr"
                 value={formData.email}
@@ -70,10 +70,10 @@ const ReservationSection = () => {
               />
             </div>
             <div>
-              <label className="block text-xs tracking-wide uppercase text-muted-foreground font-body mb-3">رقم الهاتف</label>
+              <label className="block text-xs tracking-wide uppercase text-muted-foreground font-body mb-2 sm:mb-3">رقم الهاتف</label>
               <input
                 type="tel"
-                className="editorial-input w-full text-foreground"
+                className="editorial-input w-full text-foreground text-sm sm:text-base"
                 placeholder="+212 600 000 000"
                 dir="ltr"
                 value={formData.phone}
@@ -82,12 +82,12 @@ const ReservationSection = () => {
               />
             </div>
             <div>
-              <label className="block text-xs tracking-wide uppercase text-muted-foreground font-body mb-3">عدد المدعوين</label>
+              <label className="block text-xs tracking-wide uppercase text-muted-foreground font-body mb-2 sm:mb-3">عدد المدعوين</label>
               <input
                 type="number"
                 min="1"
                 max="10"
-                className="editorial-input w-full text-foreground"
+                className="editorial-input w-full text-foreground text-sm sm:text-base"
                 placeholder="1"
                 value={formData.guests}
                 onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
@@ -96,12 +96,12 @@ const ReservationSection = () => {
             </div>
           </div>
 
-          <div className="text-center pt-4">
+          <div className="text-center pt-2 sm:pt-4">
             <motion.button
               type="submit"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="px-16 py-4 bg-foreground text-background font-heading text-base tracking-[0.15em] hover:bg-muted-foreground transition-colors duration-300"
+              className="px-10 sm:px-16 py-3 sm:py-4 bg-foreground text-background font-heading text-sm sm:text-base tracking-[0.15em] hover:bg-muted-foreground transition-colors duration-300"
             >
               تأكيد الحجز
             </motion.button>

@@ -9,9 +9,9 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="py-20 px-6">
+    <section className="py-14 sm:py-20 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.labelFr}
@@ -21,10 +21,10 @@ const StatsSection = () => {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="text-center"
             >
-              <span className="font-heading text-4xl md:text-5xl text-foreground block">
+              <span className="font-heading text-3xl sm:text-4xl md:text-5xl text-foreground block">
                 {stat.value}
               </span>
-              <span className="text-xs tracking-[0.2em] uppercase text-muted-foreground font-body mt-3 block">
+              <span className="text-[10px] sm:text-xs tracking-[0.2em] uppercase text-muted-foreground font-body mt-2 sm:mt-3 block">
                 {stat.labelFr}
               </span>
             </motion.div>
