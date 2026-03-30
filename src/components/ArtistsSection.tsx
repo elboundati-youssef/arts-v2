@@ -13,7 +13,7 @@ const artists = [
 
 const ArtistsSection = () => {
   return (
-    <section className="py-32 px-6">
+    <section id="artists" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -23,15 +23,15 @@ const ArtistsSection = () => {
           className="text-center mb-20"
           dir="rtl"
         >
-          <span className="text-sm tracking-[0.3em] uppercase text-primary font-body mb-4 block">
+          <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground font-body mb-4 block">
             الفنانون المشاركون
           </span>
           <h2 className="font-heading text-3xl md:text-5xl text-foreground">
-            رواد الإبداع <span className="gold-gradient-text">المعاصر</span>
+            رواد الإبداع <span className="italic">المعاصر</span>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {artists.map((artist, i) => (
             <motion.div
               key={artist.name}
@@ -39,27 +39,22 @@ const ArtistsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: i * 0.15 }}
-              className="group relative overflow-hidden cursor-pointer"
+              className="group cursor-pointer"
             >
-              <div className="aspect-[3/4] overflow-hidden">
+              <div className="aspect-[3/4] overflow-hidden mb-4">
                 <img
                   src={artist.image}
                   alt={artist.name}
                   width={640}
                   height={896}
                   loading="lazy"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
                 />
               </div>
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
-              {/* Info */}
-              <div className="absolute bottom-0 left-0 right-0 p-6" dir="rtl">
-                <h3 className="font-heading text-lg text-foreground mb-1">{artist.name}</h3>
-                <p className="text-sm text-primary font-body">{artist.role}</p>
+              <div dir="rtl">
+                <h3 className="font-heading text-lg text-foreground">{artist.name}</h3>
+                <p className="text-sm text-muted-foreground font-body mt-1">{artist.role}</p>
               </div>
-              {/* Gold accent line */}
-              <div className="absolute bottom-0 left-0 w-0 group-hover:w-full h-[2px] bg-primary transition-all duration-500" />
             </motion.div>
           ))}
         </div>
