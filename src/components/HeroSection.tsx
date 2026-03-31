@@ -34,8 +34,12 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.3 }}
           className="hidden lg:flex flex-col items-start gap-3 text-right flex-1"
         >
-          <span className="text-sm text-muted-foreground font-body">قصر الفنون والثقافة</span>
-          <span className="text-sm text-muted-foreground font-body">طنجة، المغرب</span>
+       <span className="text-sm md:text-base lg:text-lg text-muted-foreground font-body">
+            قصر الفنون والثقافة
+          </span>
+          <span className="text-sm md:text-base lg:text-lg text-muted-foreground font-body">
+            طنجة، المغرب
+          </span>
           <div className="bg-[#1A1A1A]/20 w-12 h-[1px] mt-4" />
           <span className="text-lg text-muted-foreground mt-2" style={{ fontFamily: 'Amiri, serif' }}>11 — 13 أبريل</span>
           <span className="text-lg text-muted-foreground" style={{ fontFamily: 'Amiri, serif' }}>2026</span>
@@ -80,7 +84,12 @@ const HeroSection = () => {
           {/* Mobile date */}
           <div className="lg:hidden mt-4 text-sm text-gray-500 text-center flex flex-col items-center gap-1">
             <span>قصر الفنون والثقافة · طنجة</span>
-            <span dir="ltr">11 — 13 أبريل 2026</span>
+           <span dir="ltr" className="lg:text-lg lg:mt-1 flex items-center justify-center lg:justify-start gap-1">
+            
+            <span style={{ fontFamily: 'system-ui, sans-serif' }}>2026</span>
+            <span>أبريل</span>
+            <span style={{ fontFamily: 'system-ui, sans-serif' }}>13 — 11</span>
+          </span>
           </div>
 
           {/* زر الحجز */}

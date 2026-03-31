@@ -80,7 +80,7 @@ const EventDetails = () => {
               
               {/* التاريخ */}
               <div>
-                <h3 className="text-[10px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">التاريخ</h3>
+                <h3 className="text-[15px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">التاريخ</h3>
                 <p className="text-xl sm:text-2xl lg:text-3xl text-[#111111]" style={{ fontFamily: 'Amiri, serif' }}>
                   11 · 12 · 13 أبريل 2026
                 </p>
@@ -88,7 +88,7 @@ const EventDetails = () => {
 
               {/* الوقت */}
               <div>
-                <h3 className="text-[10px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">الوقت</h3>
+                <h3 className="text-[15px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">الوقت</h3>
                 <p className="text-xl sm:text-2xl lg:text-3xl text-[#111111]" style={{ fontFamily: 'Amiri, serif' }}>
                   الساعة السادسة مساءً
                 </p>
@@ -96,7 +96,7 @@ const EventDetails = () => {
 
               {/* المكان */}
               <div>
-                <h3 className="text-[10px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">المكان</h3>
+                <h3 className="text-[15px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">المكان</h3>
                 <p className="text-xl sm:text-2xl lg:text-3xl text-[#111111]" style={{ fontFamily: 'Amiri, serif' }}>
                   قصر الفنون والثقافة — طنجة
                 </p>
@@ -104,7 +104,7 @@ const EventDetails = () => {
 
               {/* الدخول */}
               <div className="pt-4 lg:pt-6 border-t border-gray-200/80">
-                <h3 className="text-[10px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">الوصول</h3>
+                <h3 className="text-[15px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">الوصول</h3>
                 <p className="text-lg sm:text-xl lg:text-2xl text-[#d4af37]" style={{ fontFamily: 'Amiri, serif' }}>
                   الدخول مجاني — بالتسجيل المسبق فقط
                 </p>

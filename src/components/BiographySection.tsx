@@ -37,7 +37,7 @@ const BiographySection = () => {
           >
             {/* العناوين */}
             <div className="mb-8 sm:mb-12 text-center lg:text-right">
-              <span className="text-xs sm:text-sm text-gray-400 tracking-widest uppercase mb-3 block font-medium">
+              <span className="text-[15px] sm:text-sm text-gray-400 tracking-widest uppercase mb-3 block font-medium">
                 إشراف وتنسيق
               </span>
               <h2 className="text-4xl sm:text-5xl md:text-[4rem] text-[#111111] leading-tight font-komomken">
@@ -90,7 +90,7 @@ const BiographySection = () => {
             
             {/* اللقب تحت الصورة */}
             <div className="text-center mt-4 sm:mt-8">
-              <p className="text-xs sm:text-sm text-gray-400 tracking-[0.2em] font-medium uppercase">
+              <p className="text-[15px] sm:text-sm text-gray-400 tracking-[0.2em] font-medium uppercase">
                 مديرة المعرض
               </p>
             </div>

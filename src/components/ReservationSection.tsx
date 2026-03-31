@@ -116,8 +116,8 @@ const ReservationSection = () => {
                 <span className="text-sm tracking-widest text-white/80 mb-3 sm:mb-4 block">
                   حجز خاص
                 </span>
-                <h2 className="font-heading text-3xl sm:text-4xl md:text-6xl text-white mb-4 sm:mb-6">
-                  تجربة <span className="text-[#d4af37]">VIP</span> حصرية
+             <h2 className="font-heading text-[#d4af37] text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6">
+                  تجربة حصرية
                 </h2>
                 <p className="text-white/90 text-base sm:text-lg max-w-lg mx-auto">
                   احجز مقعدك في أمسية الافتتاح الحصرية واستمتع بتجربة فنية لا تُنسى
@@ -158,6 +158,8 @@ const ReservationSection = () => {
                       className="w-full bg-transparent border-0 border-b border-white/40 px-0 py-3 text-white placeholder:text-white/50 focus:outline-none focus:border-[#d4af37] focus:ring-0 transition-colors duration-300 text-base sm:text-lg"
                       placeholder="email@example.com"
                       dir="ltr"
+                      // 🔴 أضفنا هذا السطر لإجبار الحقل على استخدام خط النظام العادي
+                      style={{ fontFamily: 'system-ui, sans-serif' }}
                     />
                     {errors.email && <span className="text-red-400 text-xs">{errors.email.message}</span>}
                   </div>
@@ -171,6 +173,8 @@ const ReservationSection = () => {
                       className="w-full bg-transparent border-0 border-b border-white/40 px-0 py-3 text-white placeholder:text-white/50 focus:outline-none focus:border-[#d4af37] focus:ring-0 transition-colors duration-300 text-base sm:text-lg"
                       placeholder="+212 600 000 000"
                       dir="ltr"
+                      // 🔴 وأضفنا نفس السطر هنا أيضاً
+                      style={{ fontFamily: 'system-ui, sans-serif' }}
                     />
                     {errors.phone && <span className="text-red-400 text-xs">{errors.phone.message}</span>}
                   </div>
@@ -227,7 +231,7 @@ const ReservationSection = () => {
                 ننتظر حضوركم الاستثنائي في قصر الفنون والثقافة
               </p>
               <p className="text-white/80 mt-4">
-                جاري تحميل تذكرة الـ VIP الخاصة بك...
+                جاري تحميل تذكرة الخاصة بك...
               </p>
             </motion.div>
           )}
@@ -244,7 +248,7 @@ const ReservationSection = () => {
           >
             <div className="text-center border-b-2 border-dashed pb-6 mb-8" style={{ borderColor: '#d4af37' }}>
               <h1 className="text-5xl m-0" style={{ color: '#d4af37' }}>تقاطعات الرؤى</h1>
-              <p className="mt-3 text-sm" style={{ color: '#cccccc' }}>تذكرة VIP حصرية</p>
+              <p className="mt-3 text-sm" style={{ color: '#cccccc' }}>تذكرة حصرية</p>
             </div>
 
             <div className="space-y-4 text-lg">
