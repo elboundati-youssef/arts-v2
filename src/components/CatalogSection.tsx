@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
-import Cover from "@/assets/iiiiiiiimage-t.png";
+import Cover from "@/assets/newcatalog.png";
 import Pdf from "@/assets/pdf/art-pdf.pdf";
 const CatalogSection = () => {
   return (
