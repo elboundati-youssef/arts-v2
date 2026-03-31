@@ -76,7 +76,9 @@ const MapSection = () => {
           href="#reservation"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="group relative flex items-center justify-center px-10 py-4 sm:px-12 sm:py-5 bg-[#111111] text-white font-medium text-xl sm:text-2xl overflow-hidden transition-all duration-500 hover:bg-[#d4af37] shadow-xl hover:shadow-[0_15px_30px_rgba(212,175,55,0.3)] cursor-pointer rounded-sm"
+          
+            // 🔴 حجم وأبعاد زر متوازنة
+            className="mt-6 sm:mt-10 inline-flex items-center justify-center px-7 py-3 sm:px-10 sm:py-4 bg-[#1A1A1A] text-white font-medium text-[15px] sm:text-lg hover:bg-[#d4af37] hover:text-[#1A1A1A] transition-all duration-300 shadow-lg rounded-full"
           style={{ fontFamily: 'Amiri, serif' }}
         >
           {/* لمعان خفيف يمر عبر الزر (التأثير الذي أضفته أنت) */}

@@ -70,7 +70,7 @@ const ArtistsSection = () => {
             className="text-4xl sm:text-5xl md:text-6xl text-[#1A1A1A]"
             style={{ fontFamily: 'Amiri, serif' }}
           >
-            رواد الإبداع <span className="italic text-gray-400">المعاصر</span>
+             فنانون من مختلف <span className="italic text-gray-400">ربوع المملكة</span>
           </h2>
         </motion.div>
       </div>

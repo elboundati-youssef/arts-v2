@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
-import Cover from "@/assets/book-cover.jpg";
+import Cover from "@/assets/iiiiiiiimage-t.png";
 import Pdf from "@/assets/pdf/art-pdf.pdf";
 const CatalogSection = () => {
   return (
@@ -21,7 +21,7 @@ const CatalogSection = () => {
           >
             {/* العناوين */}
             <div className="mb-6 sm:mb-8">
-              <span className="text-[10px] sm:text-xs text-gray-400 tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 block font-medium">
+              <span className="text-[15px] sm:text-xs text-gray-400 tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 block font-medium">
                 الإصدار الرسمي
               </span>
               <h2 className="text-4xl sm:text-5xl md:text-[3.5rem] text-[#111111] leading-tight" style={{ fontFamily: 'Amiri, serif' }}>
@@ -55,11 +55,14 @@ const CatalogSection = () => {
               whileTap={{ scale: 0.98 }}
               href={Pdf}
               download="كتالوج_تقاطعات_الرؤى.pdf"
-              className="inline-flex items-center justify-center gap-3 w-full sm:w-auto bg-[#111111] text-white text-base sm:text-lg font-medium py-4 px-8 rounded-sm cursor-pointer transition-colors duration-300 hover:bg-[#d4af37] group shadow-md"
+          
+            // 🔴 حجم وأبعاد زر متوازنة
+            className="mt-6 sm:mt-10 inline-flex items-center justify-center px-7 py-3 sm:px-10 sm:py-4 bg-[#1A1A1A] text-white font-medium text-[15px] sm:text-lg hover:bg-[#d4af37] hover:text-[#1A1A1A] transition-all duration-300 shadow-lg rounded-full"
               style={{ fontFamily: 'Amiri, serif' }}
             >
               <Download size={22} className="group-hover:animate-bounce" />
               <span className="mt-1">تحميل النسخة الرقمية (PDF)</span>
+
             </motion.a>
           </motion.div>
 

@@ -1,25 +1,54 @@
 import { motion } from "framer-motion";
+import darkTexture from "@/assets/dark-texture.jpg";
 
 const FooterSection = () => {
   return (
-    <footer className="py-10 sm:py-16 px-4 sm:px-6 border-t border-border">
-      <div className="max-w-7xl mx-auto">
+  
+    <footer className="pt-28 pb-14 sm:py-20 px-4 sm:px-6 relative overflow-hidden">
+      
+    
+      <div className="absolute inset-0 z-0">
+     
+        <img 
+          src={darkTexture} 
+          alt="" 
+          className="w-full h-full object-cover object-bottom sm:object-center" 
+          aria-hidden="true" 
+        />
+        <div className="absolute inset-0 bg-[#0a1628]/92" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col items-center text-center space-y-4 sm:space-y-6"
+          transition={{ duration: 1 }}
+          className="flex flex-col items-center text-center space-y-5 sm:space-y-7"
         >
-          <span className="font-heading text-lg sm:text-xl italic text-foreground">
+          <span 
+            className="text-2xl sm:text-3xl text-white"
+            style={{ fontFamily: 'Amiri, serif' }}
+          >
+            تقاطعات الرؤى
+          </span>
+          
+          <span className="text-xs sm:text-sm italic text-[#d4af37] font-body tracking-wider">
             Cultures de l'Âme
           </span>
-          <div className="divider w-12" />
-          <div className="space-y-1 text-muted-foreground font-body text-xs sm:text-sm" dir="rtl">
-            <p>قصر الفنون والثقافة</p>
-            <p>شارع محمد الخامس، طنجة — المغرب</p>
+          
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-[1px] bg-[#d4af37]/60" />
+            <div className="w-1.5 h-1.5 rounded-full bg-[#d4af37]" />
+            <div className="w-8 h-[1px] bg-[#d4af37]/60" />
           </div>
-          <p className="text-muted-foreground/50 text-[10px] sm:text-xs font-body">
+          
+          <div className="space-y-1.5 text-white/80 font-body text-xs sm:text-sm" dir="rtl">
+            <p>قصر الفنون والثقافة</p>
+            <p>شارع محمد الخامس، طنجة — المملكة المغربية</p>
+          </div>
+          
+          <p className="text-white/60 text-[10px] sm:text-xs font-body tracking-wider">
             © 2026 Cultures de l'Âme — All rights reserved
           </p>
         </motion.div>
