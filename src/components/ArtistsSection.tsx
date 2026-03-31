@@ -21,7 +21,6 @@ import img19 from "@/assets/img19.jpeg";
 import img20 from "@/assets/img20.jpeg";
 import img21 from "@/assets/img21.jpeg";
 
-
 // بيانات الفنانين الحقيقية
 const artists = [
   { id: 1, name: "مريم نجاح", image: img1, gender: 'female' },
@@ -44,7 +43,7 @@ const artists = [
   { id: 18, name: "منى الأوراوي", image: img18, gender: 'female' },
   { id: 19, name: "شكري الركراكي", image: img19, gender: 'male' },
   { id: 20, name: "سموني نعيمة", image: img20, gender: 'female' },
-  { id: 21, name: "فؤاد يزيدي", image: img21  , gender: 'male' },
+  { id: 21, name: "فؤاد يزيدي", image: img21, gender: 'male' },
 ];
 
 // 🔴 الخطوة السحرية: مضاعفة المصفوفة لعمل شريط لا نهائي
@@ -52,7 +51,7 @@ const duplicatedArtists = [...artists, ...artists];
 
 const ArtistsSection = () => {
   return (
-    <section id="artists" className="py-20 sm:py-32 bg-white overflow-hidden" dir="rtl">
+    <section id="artists" className="py-20 sm:py-32 bg-white overflow-hidden font-komomken" dir="rtl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* عنوان القسم */}
@@ -66,10 +65,7 @@ const ArtistsSection = () => {
           <span className="text-sm text-gray-400 mb-3 sm:mb-4 block">
             الفنانون المشاركون
           </span>
-          <h2 
-            className="text-4xl sm:text-5xl md:text-6xl text-[#1A1A1A]"
-            style={{ fontFamily: 'Amiri, serif' }}
-          >
+          <h2 className="text-4xl sm:text-5xl md:text-6xl text-[#1A1A1A]">
              فنانون من مختلف <span className="italic text-gray-400">ربوع المملكة</span>
           </h2>
         </motion.div>
@@ -99,22 +95,20 @@ const ArtistsSection = () => {
               className="w-[220px] sm:w-[320px] flex-shrink-0 group cursor-pointer" 
               dir="rtl" // إعادة اتجاه النص للعربية داخل كل بطاقة
             >
-              {/* حاوية الصورة مع تأثير الأبيض والأسود */}
+              {/* حاوية الصورة */}
               <div className="aspect-[3/4] overflow-hidden mb-4 sm:mb-5 bg-gray-100 rounded-sm">
                 <img
                   src={artist.image}
                   alt={artist.name}
                   loading="lazy"
-                  className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+                  // 🔴 إزالة تأثير الأبيض والأسود والشفافية لإظهار الألوان الطبيعية
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-out"
                 />
               </div>
               
               {/* النصوص */}
               <div className="text-right pr-1">
-                <h3 
-                  className="text-lg sm:text-xl text-[#1A1A1A] font-medium transition-colors group-hover:text-[#d4af37]"
-                  style={{ fontFamily: 'Amiri, serif' }}
-                >
+                <h3 className="text-lg sm:text-xl text-[#1A1A1A] font-medium transition-colors group-hover:text-[#d4af37]">
                   {artist.name}
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-500 mt-1 sm:mt-2">

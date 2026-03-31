@@ -24,7 +24,10 @@ const CatalogSection = () => {
               <span className="text-[15px] sm:text-xs text-gray-400 tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 block font-medium">
                 الإصدار الرسمي
               </span>
-              <h2 className="text-4xl sm:text-5xl md:text-[3.5rem] text-[#111111] leading-tight" style={{ fontFamily: 'Amiri, serif' }}>
+              <h2 
+                // 🔴 أضفنا font-heading ومسحنا style بالكامل
+                className="font-heading text-4xl sm:text-5xl md:text-[3.5rem] text-[#111111] leading-tight" 
+              >
                 الكتالوج الفني <span className="italic text-gray-400 block sm:inline mt-1 sm:mt-0">للمعرض</span>
               </h2>
               <div className="w-16 h-[1px] bg-[#d4af37] mx-auto lg:mx-0 mt-6 sm:mt-8 opacity-60" />

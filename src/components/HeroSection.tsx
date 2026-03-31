@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import heroPainting from "@/assets/hero-painting.jpg";
+import heroPainting from "@/assets/mondesign.png";
 // 🔴 1. أضف استيراد صورة الخلفية هنا (تأكد من المسار واسم الصورة لديك)
 import backgroundPattern from "@/assets/Asset 4-t.png"; 
 
@@ -66,9 +66,8 @@ const HeroSection = () => {
           className="flex flex-col items-center lg:items-start gap-2 sm:gap-3 flex-1"
         >
           <h1 
-            // استعادة الحجم الفخم للعنوان (4xl)
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#1A1A1A] leading-tight text-center lg:text-right"
-            style={{ fontFamily: 'Amiri, serif' }} 
+            // 🔴 أضفنا font-heading هنا ومسحنا style
+            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#1A1A1A] leading-tight text-center lg:text-right"
           >
             تقاطعات{' '}
             <br className="hidden lg:block" /> 
@@ -92,7 +91,7 @@ const HeroSection = () => {
             // حجم وأبعاد زر متوازنة
             className="mt-6 sm:mt-10 inline-flex items-center justify-center px-7 py-3 sm:px-10 sm:py-4 bg-[#1A1A1A] text-white font-medium text-[15px] sm:text-lg hover:bg-[#d4af37] hover:text-[#1A1A1A] transition-all duration-300 shadow-lg rounded-full"
           >
-            احجز تذكرتك VIP
+            احجز تذكرتك
           </motion.a>
 
         </motion.div>

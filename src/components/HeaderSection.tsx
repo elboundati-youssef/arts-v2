@@ -27,11 +27,11 @@ const HeaderSection = () => {
         </div>
         {/* 2. اسم المعرض (في المنتصف) */}
         <div className="absolute left-1/2 -translate-x-1/2">
-          <span className="font-serif text-xl sm:text-2xl md:text-3xl text-[#1A1A1A] whitespace-nowrap" style={{ fontFamily: 'Amiri, serif' }}>
+          {/* 🔴 تم إزالة الستايل المضمن واستبدال font-serif بـ font-heading */}
+          <span className="font-heading text-xl sm:text-2xl md:text-3xl text-[#1A1A1A] whitespace-nowrap">
             تقاطعات الرؤى
           </span>
         </div>
-
         {/* 3. الروابط وزر الحجز (يسار الشاشة - ديسكتوب) */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
           <a href="#about" className="hover:text-[#d4af37] transition-colors">عن المعرض</a>

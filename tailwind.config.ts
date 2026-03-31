@@ -12,10 +12,11 @@ export default {
         "2xl": "1400px",
       },
     },
-    extend: {
+   extend: {
       fontFamily: {
-        heading: ["Playfair Display", "serif"],
-        body: ["Inter", "sans-serif"],
+        // 🔴 تم تغيير الخطوط لتشير إلى خطك الجديد
+        heading: ["KoMomken", "serif"],
+        body: ["KoMomken", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

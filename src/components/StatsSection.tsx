@@ -19,12 +19,18 @@ const StatsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="text-center"
+              className="text-center flex flex-col items-center"
             >
-              <span className="font-heading text-3xl sm:text-4xl md:text-5xl text-foreground block">
+              {/* 🔴 التعديل هنا: استخدام خط sans-serif أساسي وإضافة dir="ltr" */}
+              <span 
+                className="text-3xl sm:text-4xl md:text-5xl text-foreground block font-bold"
+                style={{ fontFamily: 'system-ui, sans-serif' }}
+                dir="ltr"
+              >
                 {stat.value}
               </span>
-              <span className="text-[15px] sm:text-xs tracking-[0.2em] uppercase text-muted-foreground font-body mt-2 sm:mt-3 block">
+              
+              <span className="text-[15px] sm:text-xs tracking-[0.2em] text-muted-foreground font-body mt-2 sm:mt-3 block">
                 {stat.labelFr}
               </span>
             </motion.div>

@@ -34,9 +34,9 @@ const EventDetails = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 flex flex-col gap-8 lg:gap-10 lg:pl-16"
           >
-            <h2 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] text-[#111111] leading-tight" 
-              style={{ fontFamily: 'Amiri, serif' }}
+      <h2 
+              // 🔴 أضفنا font-heading هنا ومسحنا style
+              className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] text-[#111111] leading-tight" 
             >
               تفاصيل وبرنامج
               <span className="block italic text-gray-500 mt-1 lg:mt-2 text-2xl sm:text-3xl lg:text-4xl">المعرض</span>
