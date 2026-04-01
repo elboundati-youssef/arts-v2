@@ -1,8 +1,7 @@
 /* 🔴 1. تعريف خط KoMomken بصيغة opentype */
 @font-face {
   font-family: 'KoMomken';
-  
-  src: url('/fonts/KoMomken-Regular.otf') format('opentype');
+  src: url('./assets/fonts/KoMomken-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
