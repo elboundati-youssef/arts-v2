@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 // 🔴 أضف استيراد صورة الخلفية هنا (يمكن استخدام نفس صورة Hero أو صورة جديدة)
-import backgroundPattern from "@/assets/back2-t.png"; 
+import backgroundPattern from "@/assets/.web/back2-t.webp"; 
 
 const EventDetails = () => {
   return (
@@ -13,6 +13,10 @@ const EventDetails = () => {
         <img 
           src={backgroundPattern} 
           alt="" 
+          width={1920}      
+          height={1080}     
+          loading="lazy"     
+          aria-hidden="true"
           // opacity-10 خفيفة جداً، مع mix-blend لدمجها مع الخلفية الرمادية الفاتحة
           className="w-full h-full object-cover opacity-20 mix-blend-multiply" 
         />

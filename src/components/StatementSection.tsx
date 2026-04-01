@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import gradientWave from "@/assets/gradient-wave.png";
+import gradientWave from "@/assets/.web/gradient-wave.webp";
 
 const StatementSection = () => {
   return (

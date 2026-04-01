@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import img4 from "@/assets/img4.jpeg";
 // 🔴 أضف استيراد صورة الخلفية هنا
-import backgroundPattern from "@/assets/imgblue.jpg"; 
+import backgroundPattern from "@/assets/.web/imgblue.webp"; 
 
 const BiographySection = () => {
   return (
@@ -12,9 +12,13 @@ const BiographySection = () => {
       {/* 🔴 الخلفية الفنية المدمجة (Texture) */}
       {/* ========================================= */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <img 
+       <img 
           src={backgroundPattern} 
           alt="" 
+          width={1920}       
+          height={1080}       
+          loading="lazy"      
+          aria-hidden="true"  
           className="w-full h-full object-cover opacity-[0.06] mix-blend-multiply" 
         />
         {/* طبقات التدرج والتمويه لدمج الخلفية بنعومة مع اللون الأبيض */}
@@ -80,11 +84,12 @@ const BiographySection = () => {
               {/* الصورة نفسها */}
               <div className="absolute inset-0 overflow-hidden bg-gray-50 z-10 shadow-sm rounded-sm">
                 <img 
-                  src={img4} 
-                  alt="الفنانة التشكيلية مريم نجاح" 
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
-                />
+          src={img4} 
+          alt="الفنانة التشكيلية مريم نجاح" 
+          width={400}       
+          height={600}       
+          className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
+        />
               </div>
             </div>
             

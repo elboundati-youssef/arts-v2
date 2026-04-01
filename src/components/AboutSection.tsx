@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import tangierCollage from "@/assets/Asset 4-t.png";
-import darkTexture from "@/assets/dark-texture.jpg"; 
+import tangierCollage from "@/assets/.web/Asset 4-t.webp";
+import darkTexture from "@/assets/.web/dark-texture.webp"; 
 
 const AboutSection = () => {
   return (
@@ -10,9 +10,12 @@ const AboutSection = () => {
       {/* 🔴 1. الخلفية: تم تخفيف شفافية الصورة لتختفي الخطوط المزعجة */}
       {/* ========================================= */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <img 
+       <img 
           src={darkTexture} 
           alt="" 
+          width={1920}      
+          height={1080}     
+          loading="lazy"     
           // opacity-20 ستجعل البقع الذهبية خفيفة جداً ولا تؤثر على النص
           className="w-full h-full object-cover object-center opacity-20 mix-blend-screen" 
           aria-hidden="true" 
@@ -68,12 +71,14 @@ const AboutSection = () => {
             className="lg:col-span-5 flex justify-center mt-6 lg:mt-0"
           >
             <div className="relative w-full max-w-[260px] sm:max-w-[380px]">
-              <img
-                src={tangierCollage}
-                alt="كولاج فني يمثل طنجة"
-                loading="lazy"
-                className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative z-10"
-              />
+             <img
+          src={tangierCollage}
+          alt="كولاج فني يمثل طنجة"
+          width={600}        
+          height={800}      
+          loading="lazy"     
+          className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative z-10"
+        />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] -z-10 bg-[#d4af37]/15 blur-[60px] rounded-full" />
             </div>
           </motion.div>

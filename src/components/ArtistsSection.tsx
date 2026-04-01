@@ -97,9 +97,15 @@ const ArtistsSection = () => {
             >
               {/* حاوية الصورة */}
               <div className="aspect-[3/4] overflow-hidden mb-4 sm:mb-5 bg-gray-100 rounded-sm">
-                <img
+               <img
                   src={artist.image}
-                  alt={artist.name}
+                  // 🔴 استخدمنا الجنس لجعل النص البديل احترافياً للـ SEO والمكفوفين
+                  alt={`الفنان${artist.gender === 'female' ? 'ة التشكيلية' : ' التشكيلي'} ${artist.name}`}
+                  
+                  // 🔴 الأبعاد ضرورية جداً هنا لحجز مساحة لـ 21 صورة ومنع اهتزاز الصفحة (CLS)
+                  width={400}
+                  height={550}
+                  
                   loading="lazy"
                   // 🔴 إزالة تأثير الأبيض والأسود والشفافية لإظهار الألوان الطبيعية
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-out"

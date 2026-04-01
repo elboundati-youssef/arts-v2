@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import heroPainting from "@/assets/mondesign.png";
+import heroPainting from "@/assets//.web/mondesign.webp";
 // 🔴 1. أضف استيراد صورة الخلفية هنا (تأكد من المسار واسم الصورة لديك)
-import backgroundPattern from "@/assets/Asset 4-t.png"; 
+import backgroundPattern from "@/assets/.web/Asset 4-t.webp"; 
 
 const HeroSection = () => {
   return (
@@ -15,9 +15,13 @@ const HeroSection = () => {
       {/* 🔴 3. كود الخلفية (لا يأخذ أي مساحة من حجم الصفحة) */}
       {/* ========================================= */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <img 
+       <img 
           src={backgroundPattern} 
           alt="" 
+          width={1920}          
+          height={1080}         
+          fetchPriority="high"  
+          aria-hidden="true"   
           className="w-full h-full object-cover opacity-15 mix-blend-multiply" 
         />
         {/* طبقة بيضاء شفافة لدمج الخلفية وتوضيح النصوص */}
@@ -58,6 +62,7 @@ const HeroSection = () => {
             alt="لوحة فنية معاصرة"
             width={768}
             height={1024}
+            fetchPriority="high"  
             className="w-full shadow-2xl object-cover rounded-sm"
           />
         </motion.div>

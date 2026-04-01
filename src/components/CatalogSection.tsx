@@ -1,10 +1,28 @@
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
-import Cover from "@/assets/newcatalog.png";
+import Cover from "@/assets/.web/newcatalog.webp";
+import backgroundPattern from "@/assets/.web/imgblue.webp"; 
 import Pdf from "@/assets/pdf/art-pdf.pdf";
+
 const CatalogSection = () => {
   return (
     <section id="catalog" className="py-20 sm:py-32 px-5 sm:px-8 bg-[#F8F9FA] relative overflow-hidden" dir="rtl">
+      
+      {/* ========================================= */}
+      {/* 🔴 صورة الخلفية التي أضفناها هنا */}
+      {/* ========================================= */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img 
+          src={backgroundPattern} 
+          alt="" 
+          width={1920}       
+          height={1080}       
+          loading="lazy"      
+          aria-hidden="true"  
+          className="w-full h-full object-cover opacity-[0.06] mix-blend-multiply" 
+        />
+      </div>
+
       <div className="max-w-6xl mx-auto relative z-10">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -24,10 +42,7 @@ const CatalogSection = () => {
               <span className="text-[15px] sm:text-xs text-gray-400 tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 block font-medium">
                 الإصدار الرسمي
               </span>
-              <h2 
-                // 🔴 أضفنا font-heading ومسحنا style بالكامل
-                className="font-heading text-4xl sm:text-5xl md:text-[3.5rem] text-[#111111] leading-tight" 
-              >
+              <h2 className="font-heading text-4xl sm:text-5xl md:text-[3.5rem] text-[#111111] leading-tight">
                 الكتالوج الفني <span className="italic text-gray-400 block sm:inline mt-1 sm:mt-0">للمعرض</span>
               </h2>
               <div className="w-16 h-[1px] bg-[#d4af37] mx-auto lg:mx-0 mt-6 sm:mt-8 opacity-60" />
@@ -48,6 +63,9 @@ const CatalogSection = () => {
               <img
                 src={Cover}
                 alt="غلاف كتالوج المعرض"
+                width={1280}       
+                height={1280}     
+                loading="lazy"     
                 className="w-full h-auto object-cover shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)]"
               />
             </div>
@@ -58,14 +76,11 @@ const CatalogSection = () => {
               whileTap={{ scale: 0.98 }}
               href={Pdf}
               download="كتالوج_تقاطعات_الرؤى.pdf"
-          
-            // 🔴 حجم وأبعاد زر متوازنة
-            className="mt-6 sm:mt-10 inline-flex items-center justify-center px-7 py-3 sm:px-10 sm:py-4 bg-[#1A1A1A] text-white font-medium text-[15px] sm:text-lg hover:bg-[#d4af37] hover:text-[#1A1A1A] transition-all duration-300 shadow-lg rounded-full"
+              className="mt-6 sm:mt-10 inline-flex items-center justify-center px-7 py-3 sm:px-10 sm:py-4 bg-[#1A1A1A] text-white font-medium text-[15px] sm:text-lg hover:bg-[#d4af37] hover:text-[#1A1A1A] transition-all duration-300 shadow-lg rounded-full"
               style={{ fontFamily: 'Amiri, serif' }}
             >
               <Download size={22} className="group-hover:animate-bounce" />
-              <span className="mt-1">تحميل النسخة الرقمية (PDF)</span>
-
+              <span className="mt-1 mr-2">تحميل النسخة الرقمية (PDF)</span>
             </motion.a>
           </motion.div>
 
@@ -90,6 +105,8 @@ const CatalogSection = () => {
                 <img
                   src={Cover}
                   alt="غلاف كتالوج المعرض"
+                  width={1280}   
+                  height={1280}  
                   loading="lazy"
                   className="w-full h-auto object-cover rounded-[2px]"
                 />

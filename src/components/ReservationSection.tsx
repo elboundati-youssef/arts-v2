@@ -5,7 +5,7 @@ import { z } from 'zod';
 import { motion, AnimatePresence } from "framer-motion";
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import darkTexture from "@/assets/dark-texture.jpg"; 
+import darkTexture from "@/assets/.web/dark-texture.webp"; 
 
 // ==========================================
 // 1. إضافة profession إلى Zod Schema
@@ -92,11 +92,14 @@ const ReservationSection = () => {
     <section id="reservation" className="py-16 sm:py-32 px-4 sm:px-6 relative overflow-hidden font-komomken">
       
       <div className="absolute inset-0 z-0">
-        <img 
+       <img 
           src={darkTexture} 
           alt="" 
+          width={1920}     
+          height={1080}      
+          loading="lazy"    
           className="w-full h-full object-cover" 
-          aria-hidden="true"
+          aria-hidden="true" 
         />
         <div className="absolute inset-0 bg-[#0a1628]/90" />
       </div>

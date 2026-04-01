@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import darkTexture from "@/assets/dark-texture.jpg";
+import darkTexture from "@/assets/.web/dark-texture.webp";
 
 const FooterSection = () => {
   return (
@@ -12,8 +12,11 @@ const FooterSection = () => {
         <img 
           src={darkTexture} 
           alt="" 
-          className="w-full h-full object-cover object-bottom sm:object-center" 
+          width={1920}      
+          height={1080}     
+          loading="lazy"    
           aria-hidden="true" 
+          className="w-full h-full object-cover object-bottom sm:object-center" 
         />
         <div className="absolute inset-0 bg-[#0a1628]/92" />
       </div>
