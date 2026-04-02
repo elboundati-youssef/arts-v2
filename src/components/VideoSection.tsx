@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
-import artistStudio from "@/assets/video/Reel_Expo_Najah.mp4";
+import artistStudio from "@/assets/video/v11.mp4";
 
 const VideoSection = () => {
   // Création d'une référence pour cibler l'élément vidéo
