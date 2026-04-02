@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 import img4 from "@/assets/img4.jpeg";
-// 🔴 أضف استيراد صورة الخلفية هنا
 import backgroundPattern from "@/assets/.web/imgblue.webp"; 
 
 const BiographySection = () => {
   return (
-    // 🔴 أضفنا "relative" للقسم لكي نحتوي الخلفية بداخله
     <section id="about-artist" className="py-20 sm:py-32 bg-white px-5 sm:px-8 overflow-hidden relative font-komomken" dir="rtl">
       
       {/* ========================================= */}
@@ -15,8 +13,8 @@ const BiographySection = () => {
        <img 
           src={backgroundPattern} 
           alt="" 
-          width={1920}       
-          height={1080}       
+          width={1920}      
+          height={1080}      
           loading="lazy"      
           aria-hidden="true"  
           className="w-full h-full object-cover opacity-[0.06] mix-blend-multiply" 
@@ -29,9 +27,29 @@ const BiographySection = () => {
 
       <div className="max-w-6xl mx-auto relative z-10">
         
+        {/* ========================================= */}
+        {/* 🔴 1. العنوان للموبايل فقط (يظهر فوق الصورة) */}
+        {/* ========================================= */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="block lg:hidden text-center mb-10"
+        >
+          <span className="text-[15px] sm:text-sm text-gray-400 tracking-widest uppercase mb-3 block font-medium">
+            إشراف وتنسيق
+          </span>
+          <h2 className="text-4xl sm:text-5xl text-[#111111] leading-tight font-komomken">
+            مريم <span className="italic text-gray-400">نجاح</span>
+          </h2>
+          <div className="w-16 h-[1px] bg-[#d4af37] mx-auto mt-6 opacity-60" />
+        </motion.div>
+
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           
-          {/* 1. جهة اليمين (النص والسيرة الذاتية) */}
+          {/* جهة اليمين (النص والسيرة الذاتية) */}
           <motion.div 
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -39,15 +57,17 @@ const BiographySection = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 flex flex-col order-2 lg:order-1"
           >
-            {/* العناوين */}
-            <div className="mb-8 sm:mb-12 text-center lg:text-right">
-              <span className="text-[15px] sm:text-sm text-gray-400 tracking-widest uppercase mb-3 block font-medium">
+            {/* ========================================= */}
+            {/* 🔴 2. العنوان للكمبيوتر فقط (مخفي في الموبايل) */}
+            {/* ========================================= */}
+            <div className="hidden lg:block mb-12 text-right">
+              <span className="text-sm text-gray-400 tracking-widest uppercase mb-3 block font-medium">
                 إشراف وتنسيق
               </span>
-              <h2 className="text-4xl sm:text-5xl md:text-[4rem] text-[#111111] leading-tight font-komomken">
+              <h2 className="text-[4rem] text-[#111111] leading-tight font-komomken">
                 مريم <span className="italic text-gray-400">نجاح</span>
               </h2>
-              <div className="w-16 h-[1px] bg-[#d4af37] mx-auto lg:mx-0 mt-6 sm:mt-8 opacity-60" />
+              <div className="w-16 h-[1px] bg-[#d4af37] mx-0 mt-8 opacity-60" />
             </div>
 
             {/* النص الوصفي */}
@@ -67,7 +87,7 @@ const BiographySection = () => {
             </div>
           </motion.div>
 
-          {/* 2. جهة اليسار (الصورة والاسم) */}
+          {/* جهة اليسار (الصورة والاسم) */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -86,8 +106,8 @@ const BiographySection = () => {
                 <img 
           src={img4} 
           alt="الفنانة التشكيلية مريم نجاح" 
-          width={400}       
-          height={600}       
+          width={400}      
+          height={600}      
           className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
         />
               </div>

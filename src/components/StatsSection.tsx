@@ -4,7 +4,7 @@ const stats = [
   { value: "+50", label: "عمل فني", labelFr: "عمل فني" },
   { value: "+20", label: "فنانين", labelFr: "فنانين" },
   { value: "3", label: "أيام", labelFr: "أيام" },
-  { value: "VIP", label: "حدث حصري", labelFr: "حدث حصري" },
+  { value: "خاص", label: "حدث حصري", labelFr: "حدث حصري" },
 ];
 
 const StatsSection = () => {
@@ -30,9 +30,9 @@ const StatsSection = () => {
                 {stat.value}
               </span>
               
-              <span className="text-[15px] sm:text-xs tracking-[0.2em] text-muted-foreground font-body mt-2 sm:mt-3 block">
-                {stat.labelFr}
-              </span>
+             <span className="font-body text-[15px] sm:text-sm lg:text-base tracking-[0.2em] text-muted-foreground mt-2 sm:mt-3 lg:mt-4 block uppercase">
+    {stat.labelFr}
+  </span>
             </motion.div>
           ))}
         </div>
