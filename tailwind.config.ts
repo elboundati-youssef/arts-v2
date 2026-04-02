@@ -16,7 +16,7 @@ export default {
       fontFamily: {
   // 🔴 تخصيص الخطوط: KoMomken للعناوين و Madani للنصوص
   heading: ["KoMomken", "serif"],
-  body: ["MadaniArabic", "sans-serif"],
+  body: ["Tajawal", "sans-serif"],
 },
       colors: {
         border: "hsl(var(--border))",

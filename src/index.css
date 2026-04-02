@@ -10,7 +10,7 @@
 /* 🔴 2. تعريف خط Madani Arabic للنصوص العادية */
 @font-face {
   font-family: 'MadaniArabic';
-  src: url('./assets/fonts/Madani-Arabic-Medium.ttf') format('truetype');
+  src: url('./assets/fonts/Tajawal-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -58,7 +58,7 @@
 
     /* 🔴 3. تخصيص الخطوط: KoMomken للعناوين و Madani للنصوص */
     --font-heading: 'KoMomken', serif;
-    --font-body: 'MadaniArabic', sans-serif;
+    --font-body: 'Tajawal', sans-serif;
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 0 0% 10%;
