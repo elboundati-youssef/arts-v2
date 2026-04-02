@@ -14,10 +14,10 @@ export default {
     },
    extend: {
       fontFamily: {
-        // 🔴 تم تغيير الخطوط لتشير إلى خطك الجديد
-        heading: ["KoMomken", "serif"],
-        body: ["KoMomken", "sans-serif"],
-      },
+  // 🔴 تخصيص الخطوط: KoMomken للعناوين و Madani للنصوص
+  heading: ["KoMomken", "serif"],
+  body: ["MadaniArabic", "sans-serif"],
+},
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

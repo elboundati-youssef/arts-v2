@@ -75,7 +75,7 @@ const HeaderSection = () => {
                 onClick={() => setMenuOpen(false)} 
                 className="bg-[#1A1A1A] text-white px-8 py-3 rounded-full hover:bg-[#d4af37] transition-all duration-300 w-11/12 text-center mt-2"
               >
-                احجز تذكرتك VIP
+                احجز تذكرتك
               </a>
             </div>
           </motion.nav>

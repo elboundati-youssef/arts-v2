@@ -29,12 +29,9 @@ const FooterSection = () => {
           transition={{ duration: 1 }}
           className="flex flex-col items-center text-center space-y-5 sm:space-y-7"
         >
-          <span 
-            className="text-2xl sm:text-3xl text-white"
-            style={{ fontFamily: 'Amiri, serif' }}
-          >
-            تقاطعات الرؤى
-          </span>
+         <span className="font-heading text-2xl sm:text-3xl text-white">
+  تقاطعات الرؤى
+</span>
           
           <span className="text-xs sm:text-sm italic text-[#d4af37] font-body tracking-wider">
             Cultures de l'Âme

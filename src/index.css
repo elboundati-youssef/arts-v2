@@ -1,8 +1,17 @@
-/* 🔴 1. تعريف خط KoMomken بصيغة opentype */
+/* 🔴 1. تعريف خط KoMomken للعناوين */
 @font-face {
   font-family: 'KoMomken';
   src: url('./assets/fonts/KoMomken-Regular.otf') format('opentype');
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 🔴 2. تعريف خط Madani Arabic للنصوص العادية */
+@font-face {
+  font-family: 'MadaniArabic';
+  src: url('./assets/fonts/Madani-Arabic-Medium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -47,9 +56,9 @@
     --charcoal: 0 0% 10%;
     --warm-gray: 0 0% 60%;
 
-    /* 🔴 2. تطبيق خط KoMomken على العناوين والنصوص */
+    /* 🔴 3. تخصيص الخطوط: KoMomken للعناوين و Madani للنصوص */
     --font-heading: 'KoMomken', serif;
-    --font-body: 'KoMomken', sans-serif;
+    --font-body: 'MadaniArabic', sans-serif;
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 0 0% 10%;
@@ -69,7 +78,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-body); /* سيعتمد الآن على KoMomken */
+    font-family: var(--font-body); /* سيعتمد الآن على MadaniArabic */
   }
 
   h1, h2, h3, h4, h5, h6 {

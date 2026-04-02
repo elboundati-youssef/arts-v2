@@ -68,8 +68,7 @@ const EventDetails = () => {
             </div>
           </motion.div>
 
-          {/* خط فاصل عمودي يظهر فقط في الشاشات الكبيرة */}
-          <div className="hidden lg:block absolute left-[41%] top-10 bottom-10 w-[1px] bg-gray-200/80" />
+<div className="hidden lg:block absolute left-[41%] top-10 bottom-10 w-[1px] bg-gray-200/80" />
 
           {/* العمود الأيسر: بطاقة المعلومات (الزمان والمكان) */}
           <motion.div 
@@ -84,36 +83,36 @@ const EventDetails = () => {
               
               {/* التاريخ */}
               <div>
-                <h3 className="text-[15px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">التاريخ</h3>
-                <p className="text-xl sm:text-2xl lg:text-3xl text-[#111111]" style={{ fontFamily: 'Amiri, serif' }}>
+                <h3 className="font-body text-[15px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">التاريخ</h3>
+                <p className="font-body text-xl sm:text-2xl lg:text-3xl text-[#111111]">
                   11 · 12 · 13 أبريل 2026
                 </p>
               </div>
 
               {/* الوقت */}
               <div>
-                <h3 className="text-[15px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">الوقت</h3>
-                <p className="text-xl sm:text-2xl lg:text-3xl text-[#111111]" style={{ fontFamily: 'Amiri, serif' }}>
+                <h3 className="font-body text-[15px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">الوقت</h3>
+                <p className="font-body text-xl sm:text-2xl lg:text-3xl text-[#111111]">
                   الساعة السادسة مساءً
                 </p>
               </div>
 
               {/* المكان */}
               <div>
-                <h3 className="text-[15px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">المكان</h3>
-                <p className="text-xl sm:text-2xl lg:text-3xl text-[#111111]" style={{ fontFamily: 'Amiri, serif' }}>
+                <h3 className="font-body text-[15px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">المكان</h3>
+                <p className="font-body text-xl sm:text-2xl lg:text-3xl text-[#111111]">
                   قصر الفنون والثقافة — طنجة
                 </p>
               </div>
 
               {/* الدخول */}
               <div className="pt-4 lg:pt-6 border-t border-gray-200/80">
-                <h3 className="text-[15px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">الوصول</h3>
-                <p className="text-lg sm:text-xl lg:text-2xl text-[#d4af37]" style={{ fontFamily: 'Amiri, serif' }}>
+                <h3 className="font-body text-[15px] lg:text-xs uppercase tracking-widest text-gray-500 mb-2 lg:mb-3 font-medium">الوصول</h3>
+                <p className="font-body text-lg sm:text-xl lg:text-2xl text-[#d4af37]">
                   الدخول مجاني — بالتسجيل المسبق فقط
                 </p>
               </div>
-
+              
             </div>
           </motion.div>
 

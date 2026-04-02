@@ -12,9 +12,9 @@ const MapSection = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-12 sm:mb-16"
       >
-        <h2 className="text-4xl sm:text-5xl md:text-[3.5rem] text-[#111111]" style={{ fontFamily: 'Amiri, serif' }}>
-          موقع <span className="italic text-gray-400">الحدث</span>
-        </h2>
+       <h2 className="font-heading text-4xl sm:text-5xl md:text-[3.5rem] text-[#111111]">
+  موقع <span className="italic text-gray-400">الحدث</span>
+</h2>
         <div className="w-16 h-[1px] bg-[#d4af37] mx-auto mt-6 opacity-60" />
       </motion.div>
 
@@ -87,7 +87,7 @@ const MapSection = () => {
             transition={{ repeat: Infinity, duration: 3, ease: "linear", repeatDelay: 1.5 }}
             animate={{ left: ['-100%', '200%'] }}
           />
-          <span className="relative z-10 tracking-wide">تأكيد الحضور VIP</span>
+          <span className="relative z-10 tracking-wide">تأكيد الحضور </span>
         </motion.a>
       </motion.div>
       
