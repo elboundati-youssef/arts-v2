@@ -23,10 +23,10 @@ import img21 from "@/assets/img21.jpeg";
 
 // بيانات الفنانين الحقيقية
 const artists = [
-  { id: 1, name: "مريم نجاح", image: img1, gender: 'female' },
-  { id: 2, name: "توفيق مالك", image: img2, gender: 'male' },
-  { id: 3, name: "نادية عبادي", image: img3, gender: 'female' },
-  { id: 4, name: "حمودة الزاوي", image: img4, gender: 'male' },
+  { id: 1, name: "حمودة الزاوي", image: img1, gender: 'female' },
+  { id: 2, name: "نادية عبادي", image: img2, gender: 'female' },
+  { id: 3, name: "توفيق مالك", image: img3, gender: 'male' },
+  { id: 4, name: "مريم نجاح", image: img4, gender: 'female' },
   { id: 5, name: "الغسال مطيع", image: img5, gender: 'male' },
   { id: 6, name: "نجاة داود", image: img6, gender: 'female' },
   { id: 7, name: "عثمان ابن الحبيب", image: img7, gender: 'male' },
