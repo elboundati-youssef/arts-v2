@@ -1,8 +1,25 @@
-import { motion } from "framer-motion";
-import { Play } from "lucide-react";
-import artistStudio from "@/assets/artist-studio.jpg";
+import { useRef, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
+import artistStudio from "@/assets/video/Reel_Expo_Najah.mp4";
 
 const VideoSection = () => {
+  // Création d'une référence pour cibler l'élément vidéo
+  const videoRef = useRef(null);
+  
+  // useInView détecte si la vidéo est visible à l'écran
+  const isInView = useInView(videoRef, { margin: "0px" });
+
+  // Gère la lecture et la pause en fonction de la visibilité
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isInView) {
+        videoRef.current.play().catch(error => console.log("Lecture automatique bloquée:", error));
+      } else {
+        videoRef.current.pause();
+      }
+    }
+  }, [isInView]);
+
   return (
     <section className="py-14 sm:py-20 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
@@ -11,26 +28,21 @@ const VideoSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative group cursor-pointer overflow-hidden"
+          className="relative group overflow-hidden" 
         >
-          <img
+          {/* L'attribut autoPlay a été retiré, le useEffect s'en charge */}
+          <video
+            ref={videoRef}
             src={artistStudio}
-            alt="Artist at work in gallery"
-            width={1920}
-            height={1080}
-            loading="lazy"
+            loop
+            muted
+            playsInline
             className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-700"
-          />
+          ></video>
+          
           <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors duration-500" />
           
-          <div className="absolute inset-0 flex items-center justify-center">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="w-14 h-14 sm:w-20 sm:h-20 rounded-full border-2 border-primary-foreground flex items-center justify-center bg-primary-foreground/10 backdrop-blur-sm"
-            >
-              <Play className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground ml-0.5 sm:ml-1" />
-            </motion.div>
-          </div>
+          {/* L'icône de lecture (Play) et son conteneur ont été complètement supprimés */}
         </motion.div>
       </div>
     </section>
