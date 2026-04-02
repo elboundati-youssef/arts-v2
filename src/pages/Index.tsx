@@ -40,8 +40,8 @@ const Index = () => {
       <EventDetails />
       <BiographySection />
       <StatementSection />
-      <StatsSection />
-      <VideoSection />
+      {/* <StatsSection /> */}
+      {/*<VideoSection />*/}
       <ArtistsSection />
       <ReservationSection />
       <CatalogSection />

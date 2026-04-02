@@ -62,12 +62,10 @@ const ArtistsSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 sm:mb-24"
         >
-          <span className="text-sm text-gray-400 mb-3 sm:mb-4 block">
-            الفنانون المشاركون
-          </span>
+        
           <h2 className="text-4xl sm:text-5xl md:text-6xl text-[#1A1A1A]">
-             فنانون من مختلف <span className="italic text-gray-400">ربوع المملكة</span>
-          </h2>
+  فنانون من مختلف <span className="block italic text-gray-400">ربوع المملكة</span>
+</h2>
         </motion.div>
       </div>
 

@@ -38,15 +38,16 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.3 }}
           className="hidden lg:flex flex-col items-start gap-3 text-right flex-1"
         >
-       <span className="text-sm md:text-base lg:text-lg text-muted-foreground font-body">
-            قصر الفنون والثقافة
-          </span>
+      <span className="text-sm md:text-base lg:text-lg text-[#06203f] font-body">
+  قصر الفنون والثقافة
+</span>
           <span className="text-sm md:text-base lg:text-lg text-muted-foreground font-body">
             طنجة، المغرب
           </span>
           <div className="bg-[#1A1A1A]/20 w-12 h-[1px] mt-4" />
-          <span className="text-lg text-muted-foreground mt-2" style={{ fontFamily: 'Amiri, serif' }}>11 — 13 أبريل</span>
-          <span className="text-lg text-muted-foreground" style={{ fontFamily: 'Amiri, serif' }}>2026</span>
+          <span className="text-lg text-muted-foreground mt-2" style={{ fontFamily: 'Amiri, serif' }}>11, 12, 13 أبريل 2026</span>
+
+          <span className="text-lg text-muted-foreground" style={{ fontFamily: 'Amiri, serif' }}>الساعة السادسة مساءً</span>
         </motion.div>
 
         {/* Center painting */}
@@ -76,26 +77,31 @@ const HeroSection = () => {
         >
           <h1 
             // 🔴 أضفنا font-heading هنا ومسحنا style
-            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#1A1A1A] leading-tight text-center lg:text-right"
+            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#06203f] leading-tight text-center lg:text-right"
           >
             تقاطعات{' '}
             <br className="hidden lg:block" /> 
             الرؤى
           </h1>
           <p className="text-sm sm:text-lg text-gray-600 mt-3 sm:mt-4 max-w-sm leading-relaxed text-center lg:text-right">
-            معرض فني معاصر يجمع رؤى فنانين من مختلف الثقافات في قلب مدينة طنجة.
-          </p>
+  معرض فني معاصر يجمع رؤى فنانين <br /> 
+  من مختلف الثقافات في قلب مدينة طنجة.
+</p>
           
           {/* Mobile date */}
-          <div className="lg:hidden mt-4 text-sm text-gray-500 text-center flex flex-col items-center gap-1">
-            <span>قصر الفنون والثقافة · طنجة</span>
-           <span dir="ltr" className="lg:text-lg lg:mt-1 flex items-center justify-center lg:justify-start gap-1">
-            
-            <span style={{ fontFamily: 'system-ui, sans-serif' }}>2026</span>
-            <span>أبريل</span>
-            <span style={{ fontFamily: 'system-ui, sans-serif' }}>13 — 11</span>
-          </span>
-          </div>
+         <div className="lg:hidden mt-4 text-sm text-gray-500 text-center flex flex-col items-center gap-1">
+  <span style={{ color: '#06203f' }}>قصر الفنون والثقافة · طنجة</span>
+  
+  {/* سطر التاريخ (بقي في سطر واحد بفضل flex) */}
+  <span dir="ltr" className="lg:text-lg lg:mt-1 flex items-center justify-center lg:justify-start gap-1">
+    <span style={{ fontFamily: 'system-ui, sans-serif' }}>2026</span>
+    <span>أبريل</span>
+    <span style={{ fontFamily: 'system-ui, sans-serif', direction: 'rtl' }}>11, 12و 13</span>
+  </span>
+  
+  {/* سطر الوقت (نزل إلى سطر جديد لأنه خارج الـ flex) */}
+  <span>الساعة السادسة مساءً</span>
+</div>
 
           {/* زر الحجز */}
           <motion.a
@@ -103,9 +109,10 @@ const HeroSection = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             // حجم وأبعاد زر متوازنة
-            className="mt-6 sm:mt-10 inline-flex items-center justify-center px-7 py-3 sm:px-10 sm:py-4 bg-[#1A1A1A] text-white font-medium text-[15px] sm:text-lg hover:bg-[#d4af37] hover:text-[#1A1A1A] transition-all duration-300 shadow-lg rounded-full"
+            className="mt-6 sm:mt-10 inline-flex items-center justify-center px-7 py-3 sm:px-10 sm:py-4 bg-[#d4af37] text-[#06203f] font-medium text-[15px] sm:text-lg hover:bg-[#1A1A1A] hover:text-white transition-all duration-300 shadow-lg rounded-full"
           >
-            احجز تذكرتك
+         احجز تذكرتك
+            المجانية الان
           </motion.a>
 
         </motion.div>

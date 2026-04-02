@@ -22,27 +22,27 @@ const VideoSection = () => {
 
   return (
     <section className="py-14 sm:py-20 px-4 sm:px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto flex justify-center"> {/* 🔴 flex justify-center لتوسيط الهاتف */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative group overflow-hidden" 
+          // 🔴 أضفنا خصائص الهاتف: عرض محدد، طول 9/16، زوايا دائرية، وإطار سميك
+          className="relative group overflow-hidden w-full max-w-[280px] sm:max-w-[340px] aspect-[9/16] rounded-[2.5rem] sm:rounded-[3rem] border-[8px] sm:border-[10px] border-gray-900 bg-black shadow-2xl" 
         >
-          {/* L'attribut autoPlay a été retiré, le useEffect s'en charge */}
+          {/* 🔴 class h-full بدلاً من aspect-video */}
           <video
             ref={videoRef}
             src={artistStudio}
             loop
             muted
             playsInline
-            className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-700"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           ></video>
           
           <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors duration-500" />
           
-          {/* L'icône de lecture (Play) et son conteneur ont été complètement supprimés */}
         </motion.div>
       </div>
     </section>

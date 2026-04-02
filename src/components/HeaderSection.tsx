@@ -28,7 +28,7 @@ const HeaderSection = () => {
         {/* 2. اسم المعرض (في المنتصف) */}
         <div className="absolute left-1/2 -translate-x-1/2">
           {/* 🔴 تم إزالة الستايل المضمن واستبدال font-serif بـ font-heading */}
-          <span className="font-heading text-xl sm:text-2xl md:text-3xl text-[#1A1A1A] whitespace-nowrap">
+          <span className="font-heading text-xl sm:text-2xl md:text-3xl text-[#06203f] whitespace-nowrap">
             تقاطعات الرؤى
           </span>
         </div>
@@ -40,7 +40,7 @@ const HeaderSection = () => {
           {/* زر الحجز الفخم */}
           <a 
             href="#reservation" 
-            className="bg-[#1A1A1A] text-white px-6 py-2.5 rounded-full hover:bg-[#d4af37] transition-all duration-300 shadow-sm"
+            className="bg-[#d4af37] text-[#06203f] px-6 py-2.5 rounded-full hover:bg-[#1A1A1A] hover:text-white transition-all duration-300 shadow-sm"
           >
             احجز تذكرتك
           </a>
@@ -73,7 +73,7 @@ const HeaderSection = () => {
               <a 
                 href="#reservation" 
                 onClick={() => setMenuOpen(false)} 
-                className="bg-[#1A1A1A] text-white px-8 py-3 rounded-full hover:bg-[#d4af37] transition-all duration-300 w-11/12 text-center mt-2"
+                className="bg-[#d4af37] text-[#06203f] px-8 py-3 rounded-full hover:bg-[#d4af37] transition-all duration-300 w-11/12 text-center mt-2"
               >
                 احجز تذكرتك
               </a>
